@@ -1,0 +1,12 @@
+mysql:
+  dsn: "root:root123@tcp(127.0.0.1:3306)/redbook?charset=utf8mb4&parseTime=True&loc=Local"
+redis:
+  addr: "127.0.0.1:6379"
+  password: "redis123"
+  db: 0
+jwt:
+  secret: "redbook-secret-key-123456"
+  access_expire: 3600        # 1小时
+  refresh_expire: 604800     # 7天
+server:
+  port: ":8080"
