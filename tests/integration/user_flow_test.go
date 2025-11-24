@@ -20,7 +20,7 @@ func TestUserLifecycle(t *testing.T) {
 	username := fmt.Sprintf("it_user_%d", time.Now().UnixNano())
 	password := "Passw0rd!"
 	device := "integration"
-	mobile := "13800000000"
+	mobile := fmt.Sprintf("138%08d", time.Now().UnixNano()%100000000)
 
 	// 1. Register
 	registerReq := map[string]string{
