@@ -1,0 +1,83 @@
+# ========================
+
+# Go 相关
+
+# ========================
+
+# 编译生成的可执行文件
+
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+.specstory/
+.vscode/
+.idea/
+.cursorindexingignore
+
+# Go 的包缓存
+
+pkg/
+bin/
+
+# IDE 文件
+
+*.idea/
+*.vscode/
+*.iml
+
+# ========================
+
+# Node / 前端 相关
+
+# ========================
+
+# Node.js 依赖
+
+node_modules/
+
+# 打包输出目录
+
+dist/
+build/
+
+# 日志文件
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========================
+
+# 系统相关
+
+# ========================
+
+# Mac
+
+.DS_Store
+
+# Linux
+
+*.swp
+
+# Windows
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ========================
+
+# 环境配置文件
+
+# ========================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
