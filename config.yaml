@@ -6,7 +6,7 @@ redis:
   db: 0
 jwt:
   secret: "redbook-secret-key-123456"
-  access_expire: 3600        # 1小时
-  refresh_expire: 604800     # 7天
+  access_expire: 180        # 3min
+  refresh_expire: 600     # 10min
 server:
   port: ":8080"

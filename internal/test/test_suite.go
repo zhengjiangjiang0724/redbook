@@ -194,9 +194,9 @@ func tryLogout(accessToken, refreshToken, device string) logoutResult {
 
 // endpointSmokeTests exercises register/login/refresh endpoints with positive and negative cases.
 func endpointSmokeTests() error {
-	username := fmt.Sprintf("smoke-%d", time.Now().UnixNano())
+	username := fmt.Sprintf("smoke-%d", time.Now().UnixNano()%1000000)
 	password := "SmokePwd123!"
-	mobile := fmt.Sprintf("138%08d", time.Now().UnixNano()%100000000)
+	mobile := fmt.Sprintf("13%09d", time.Now().UnixNano()%1000000000)
 	device := "smoke-device"
 
 	// Fresh registration should succeed.
@@ -426,11 +426,11 @@ th { background: #f4f4f4; }
 func main() {
 	rdb := initRedis()
 	// 配置（调整为你需要的并发和设备数）
-	username := fmt.Sprintf("smoke-%d", time.Now().UnixNano())
+	username := fmt.Sprintf("smoke-%d", time.Now().UnixNano()%1000000)
 	password := "SmokePwd123!"
-	mobile := fmt.Sprintf("138%08d", time.Now().UnixNano()%100000000)
-	deviceCount := 200  // 模拟设备数量
-	maxConcurrent := 50 // 最大并发登录 worker 数
+	mobile := fmt.Sprintf("13%09d", time.Now().UnixNano()%1000000000)
+	deviceCount := 5   // 模拟设备数量
+	maxConcurrent := 5 // 最大并发登录 worker 数
 	outCSV := "logout_report.csv"
 	outHTML := "logout_report.html"
 

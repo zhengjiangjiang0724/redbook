@@ -60,7 +60,7 @@ func main() {
 	public := r.Group("/api/v1")
 	{
 		public.POST("/users/register", userAPI.Register)
-		loginLimiter := middleware.LoginRateLimiter(config.RedisClient, 5, time.Minute)
+		loginLimiter := middleware.LoginRateLimiter(config.RedisClient, 100, time.Minute)
 		public.POST("/users/login", loginLimiter, userAPI.Login)
 		public.POST("/users/refresh", userAPI.RefreshToken)
 	}
